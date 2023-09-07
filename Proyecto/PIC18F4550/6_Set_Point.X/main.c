@@ -1,6 +1,6 @@
 /*
  * File:   main.c
- * Author: Enrique
+ * Author: Microside Technology
  *
  * Created on 27 de noviembre de 2020, 01:09 AM
  */
@@ -97,7 +97,7 @@ void ADCInit(void) {
 
 uint16_t ReadADC(void) {
     uint16_t result;
-    ADCON0bits.GO_DONE = 1; //  Inicia la COnversió AD.
+    ADCON0bits.GO_DONE = 1; //  Inicia la Conversión AD.
     while (ADCON0bits.GO_DONE); //  Espera a que termine la conversión AD.
     result = ((ADRESH << 8) + ADRESL);
     return (result);
